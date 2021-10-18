@@ -1,6 +1,7 @@
 package com.example.myeventapplication
 
-data class RoutineModel (   val id: Int,
+data class RoutineModel (
+    val id: Int,
                             val title: String,
                             val desc: String,
                             val day: String,

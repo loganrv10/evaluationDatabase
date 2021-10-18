@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity(), OnTaskItemClicked {
 
 
         addBtn.setOnClickListener {
-            dbHandler.insertRoutine("Meritate", "Good for mind and skin", "Tue","dhanbad","345")
+            dbHandler.insertRoutine("Youth festival", "the best festival of ", "27th","dhanbad","345")
         }
 
         updateBtn.setOnClickListener {
-            dbHandler.updateRoutine(1, "Drink milk", "Good for children", "Mon","ranchi","3543")
+            dbHandler.updateRoutine(1, "BOOYAa", "ROCK concert", "13th","ranchi","3543")
         }
 
         deleteBtn.setOnClickListener {
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity(), OnTaskItemClicked {
     @SuppressLint("NotifyDataSetChanged")
     override fun onEditClicked(routine: RoutineModel) {
 
-        dbHandler.updateRoutine(routine.id, "Drink milk", "Good for children", "Mon","LONDON","$32")
+        dbHandler.updateRoutine(routine.id, "kings life", "Good for children", "Mon","LONDON","$32")
         routineList = dbHandler.getRoutine()
         routineList.clear()
         routineList.addAll(dbHandler.getRoutine())
@@ -63,6 +63,4 @@ class MainActivity : AppCompatActivity(), OnTaskItemClicked {
     }
 }
 
-private fun <E> MutableList<E>.add(element: String) {
 
-}
